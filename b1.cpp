@@ -24,6 +24,7 @@ int main(){
     int m, d, k, c;
     cout << "nhap cac chi so: ";
     cin >> m >> d >> k >> c;
+    if(m<0 || k<0 || c <0 || d<=0 || m>1000 || k>1000 || c>1000 || d>1000) cout << "khong thoa man" << endl;
     int tien = tienToiThieu(m, d, k, c);
     cout <<"so tien toi thieu la: "<< tien <<endl;
     return 0;

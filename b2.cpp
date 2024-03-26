@@ -25,7 +25,6 @@ using namespace std;
             if(s[i] == '}' && vector.back()=='{'){
                 vector.pop_back();
             }
-            // đoạn này em chưa hiểu rằng ví dụ như chuỗi (){}() có cân bằng hay không, nếu là không cân bằng thì thêm đoạn này, nêu là cân bằng thì bỏ đoạn này
             if((s[i] == ')' || s[i] == ']' || s[i] == '}') && (s[i+1] == '(' || s[i+1] == '[' || s[i+1] == '{')) return false;
         }
         return vector.empty();
@@ -35,9 +34,11 @@ using namespace std;
 int main(){
     string s;  
     int n;
-    cin >> n;                                                    
+    cin >> n;  
+    if(n<=0 || n>100) cout << "khong thoa man";                                                  
    for(int i=0; i<n; i++){
     cin >> s;
+    if(s.length()>100000) cout << "khong thoa man";
     if(check(s)){
        cout << "true" << endl;
     }else cout << "false" << endl;
