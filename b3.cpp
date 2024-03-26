@@ -18,6 +18,7 @@ int main() {
     int y = 0;
     int x_goal, y_goal;
     cin >> x_goal >> y_goal;
+    if(x_goal<0 || y_goal<0 || x_goal>10 || y_goal>10) cout << "khong thoa man"<< endl;
     int socach = soCach(x, y, x_goal, y_goal);
     cout << "So cach de co ty so " << x_goal << " - " << y_goal << " la: " << socach << endl;
 
